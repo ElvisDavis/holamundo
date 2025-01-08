@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--El charset me permite utilizar caracteres especiales-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+    <!--Estilo css-->
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+    <!-- <h1>Primera página web</h1>
+    <h2>Primera página</h2>
+    <h3>Primera página</h3>
+    <h4>Primera página</h4>
+    <h5>Primera página</h5>
+    <h6>Primera página</h6>-->
+    <section class="container">
+        <!--Cabeceraz de mi página web-->
+        <div>
+            <header><!--header-->
+                <!--Título principal-->
+                <h1>Mi página de Juego</h1>
+                <nav>
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#sobrenosotros" class="nav-link">Sobre Nosotros</a>
+                    <a href="https://www.facebook.com/elvisdavid.pachacamacabezas" class="nav-link">Contacto</a>
+                    <a href="#calendario" class="nav-link">Calendario</a>
+                </nav>
+            </header>
+        </div>
+
+        <!--Fin del header-->
+        <!--contenido principal-->
+        <div>
+            <section id="inicio" class="section">
+                <h2>Bienvenido a mi página de juegos 2025</h2>
+                <p>Los juegos más esperados del año</p>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <img src="img/descarga.jpg" alt="web">
+                        <img src="img/descarga.jpg" alt="web1">
+                        <img src="img/descarga.jpg" alt="web2">
+
+                    </div>
+                    <button onclick="alert('Bienvenido a mi juego')">Más información</button>
+
+                </div>
+               
+                
+
+            </section><!--fin inicio-->
+            <!--sobre nosotros-->
+            <section id="sobrenostros" class="section">
+                <h2>juegos desarrollados</h2>
+                <ol>
+                    <li>Fútbol</li>
+                    <li>Peleas</li>
+                    <li>carros</li>
+                    <li>puzzle</li>
+                    <li>adivinanzas</li>
+                    <li>guerra</li>
+                </ol>
+
+            </section><!--din sobre nosotros-->
+
+            <!--Calendario de desarrollo-->
+            <section id="calendario" class="section">
+                <h2>Calendario de desarrollo</h2>
+                <table border="1">
+                    <tr>
+                        <th>id</th>
+                        <th>Fecha</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>imagen</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>12/12/2024</td>
+                        <td>Paintball</td>
+                        <td>Guerra</td>
+                        <td><img src="" alt=""></td>
+                    </tr>
+                </table>
+
+            </section><!--Fin de calendario-->
+            <!--Formulario de contacto-->
+            <section id="formulario" class="section">
+                <h2>Manejo de formularios</h2>
+                <form action="" method="get">
+                    <div>
+                        <label for="nombre">Ingrese su nombre</label>
+
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+                    </div>
+
+                    <div>
+                        <label for="password">Ingrese la contraseña</label>
+                        <input type="password" name="pass" id="password">
+                    </div>
+
+                    <div>
+                        <label for="email">Ingrse el email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+
+                    <div>
+                        <label for="">Seleccione su ciudad</label>
+                        <select name="ciudad" id="ciudad">
+                            <option value="">--Seleccione una opción--</option>
+                            <option value="Quito">Quito</option>
+                            <option value="Guayaqui">Guayaqui</option>
+                            <option value="Carchi">Cuenca</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="">Ingrese la direccion</label>
+                        <textarea name="direccion" id="direccion"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="">HTML</label>
+                        <input type="checkbox" name="" id="" value="HTML">
+
+                    </div>
+
+
+                    <!--boton submit-->
+                    <div>
+                        <input type="submit" value="ENVIAR">
+                    </div>
+
+
+                </form>
+
+            </section>
+
+        </div>
+    </section>
+
+
+</body>
+
+</html>
