@@ -40,12 +40,14 @@
                 <p>Los juegos más esperados del año</p>
                 <div class="carousel">
                     <div class="carousel-inner">
-                        <img src="img/descarga.jpg" alt="web">
-                        <img src="img/descarga.jpg" alt="web1">
-                        <img src="img/descarga.jpg" alt="web2">
+                        <img src="img/1.webp" alt="web">
+                        <img src="img/2.webp" alt="web1">
+                        <img src="img/3.webp" alt="web2">
 
                     </div>
-                    <button onclick="alert('Bienvenido a mi juego')">Más información</button>
+                    <button class="carousel-btn prev" onclick="moveSlide(-1)">Previus</button>
+                    <button class="carousel-btn next" onclick="moveSlide(1)">Next</button>
+
 
                 </div>
                
@@ -69,7 +71,7 @@
             <!--Calendario de desarrollo-->
             <section id="calendario" class="section">
                 <h2>Calendario de desarrollo</h2>
-                <table border="1">
+                <table class="table">
                     <tr>
                         <th>id</th>
                         <th>Fecha</th>
@@ -90,27 +92,27 @@
             <!--Formulario de contacto-->
             <section id="formulario" class="section">
                 <h2>Manejo de formularios</h2>
-                <form action="" method="get">
-                    <div>
-                        <label for="nombre">Ingrese su nombre</label>
+                <form action="" method="get" class="form">
+                    <div class="form-group">
+                        <label class="form-label" for="nombre">Ingrese su nombre</label>
 
-                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                        <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
 
                     </div>
 
-                    <div>
-                        <label for="password">Ingrese la contraseña</label>
-                        <input type="password" name="pass" id="password">
+                    <div class="form-group">
+                        <label for="password" class="form-label">Ingrese la contraseña</label>
+                        <input type="password" name="pass" id="password" class="form-control">
                     </div>
 
-                    <div>
-                        <label for="email">Ingrse el email</label>
-                        <input type="email" name="email" id="email">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Ingrse el email</label>
+                        <input type="email" name="email" id="email" class="form-control">
                     </div>
 
-                    <div>
-                        <label for="">Seleccione su ciudad</label>
-                        <select name="ciudad" id="ciudad">
+                    <div class="form-group">
+                        <label class="form-label" for="">Seleccione su ciudad</label>
+                        <select name="ciudad" id="ciudad" class="form-select">
                             <option value="">--Seleccione una opción--</option>
                             <option value="Quito">Quito</option>
                             <option value="Guayaqui">Guayaqui</option>
@@ -118,21 +120,17 @@
                         </select>
                     </div>
 
-                    <div>
-                        <label for="">Ingrese la direccion</label>
-                        <textarea name="direccion" id="direccion"></textarea>
+                    <div class="form-control">
+                        <label for="" class="form-label">Ingrese la direccion</label>
+                        <textarea name="direccion" id="direccion" class="form-textarea"></textarea>
                     </div>
 
-                    <div>
-                        <label for="">HTML</label>
-                        <input type="checkbox" name="" id="" value="HTML">
-
-                    </div>
+                   
 
 
                     <!--boton submit-->
-                    <div>
-                        <input type="submit" value="ENVIAR">
+                    <div class="form-group">
+                        <input type="submit" value="ENVIAR" class="form-submit">
                     </div>
 
 
@@ -142,6 +140,35 @@
 
         </div>
     </section>
+
+
+
+
+
+    <script>
+        let currentIndex = 0;
+    
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-inner img');
+            const totalSlides = slides.length;
+            currentIndex += direction;
+    
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            }
+            if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            }
+    
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+        }
+    
+        // Cambio automático cada 5 segundos
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000);
+    </script>
 
 
 </body>
